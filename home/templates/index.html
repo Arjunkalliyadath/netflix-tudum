@@ -41,6 +41,15 @@
             </div>
         </nav>
 
+        {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} text-center m-0 rounded-0">
+        {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
+
         <!-- HERO CONTENT -->
         <div class="hero-overlay d-flex align-items-center justify-content-center">
             <div class="hero-content text-center text-white">
@@ -105,49 +114,82 @@
                 </div>
 
                 <!-- CARDS -->
-                <h3 class="section-heading">Popular Shows</h3>
+                <h3 class="section-heading">Netflix Tudum shows</h3>
                 <div class="row g-4 mb-5">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4">
                         <div class="card netflix-card h-100">
                             <img src="https://wallpaperaccess.com/full/1705896.jpg" class="card-img-top" alt="Mindhunter">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Mindhunter</h5>
                                 <p class="card-text flex-grow-1">Psychological crime thriller series.</p>
                                 <button class="btn btn-danger btn-sm">
-                                    <i class="fas fa-play"></i> Watch Now
+                                    <i class="fas fa-play"></i> <a href="https://www.netflix.com/title/80117551" target="_blank" class="btn btn-danger btn-sm">Watch Now</a>
                                 </button>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4">
                         <div class="card netflix-card h-100">
                             <img src="https://wallpaperaccess.com/full/3627082.jpg" class="card-img-top" alt="Dark">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Dark</h5>
                                 <p class="card-text flex-grow-1">Mind-bending time travel series.</p>
                                 <button class="btn btn-danger btn-sm">
-                                    <i class="fas fa-play"></i> Watch Now
+                                    <i class="fas fa-play"></i> <a href="https://www.netflix.com/title/80100172" target="_blank" class="btn btn-danger btn-sm">>Watch Now</a>
                                 </button>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4">
                         <div class="card netflix-card h-100">
                             <img src="https://m.gettywallpapers.com/wp-content/uploads/2023/12/4k-Eleven-Stranger-Things-Background-For-PC.jpg" class="card-img-top" alt="Stranger Things">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Stranger Things</h5>
                                 <p class="card-text flex-grow-1">Supernatural mystery and adventure.</p>
                                 <button class="btn btn-danger btn-sm">
-                                    <i class="fas fa-play"></i> Watch Now
+                                    <i class="fas fa-play"></i> <a href="https://www.netflix.com/title/80057281" target="_blank" class="btn btn-danger btn-sm">Watch Now</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card netflix-card h-100">
+                            <img src="https://wallpapercave.com/wp/wp1930597.jpg" class="card-img-top" alt="Better Call Saul">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Better Call Saul</h5>
+                                <p class="card-text flex-grow-1">The legal and criminal exploits of Jimmy McGill.</p>
+                                <button class="btn btn-danger btn-sm">
+                                    <i class="fas fa-play"></i> <a href="https://www.netflix.com/title/80021955" target="_blank" class="btn btn-danger btn-sm">Watch Now</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card netflix-card h-100">
+                            <img src="https://wallpapercave.com/wp/wp1892386.jpg" class="card-img-top" alt="The Walking Dead">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">The Walking Dead</h5>
+                                <p class="card-text flex-grow-1">Post-apocalyptic zombie survival drama.</p>
+                                <button class="btn btn-danger btn-sm">
+                                    <i class="fas fa-play"></i> <a href="https://www.netflix.com/title/70177057" target="_blank" class="btn btn-danger btn-sm">Watch Now</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card netflix-card h-100">
+                            <img src="https://wallpapercave.com/wp/wp5626427.jpg" class="card-img-top" alt="Ragnarok">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Ragnarok</h5>
+                                <p class="card-text flex-grow-1">Norse mythology meets modern drama.</p>
+                                <button class="btn btn-danger btn-sm">
+                                    <i class="fas fa-play"></i> <a href="https://www.netflix.com/title/80236468" target="_blank" class="btn btn-danger btn-sm">Watch Now</a>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- ACCORDION -->
+                <!-- FAQ Section Restored -->
                 <h3 class="section-heading">Frequently Asked Questions</h3>
                 <div class="accordion mb-5" id="faq">
                     <div class="accordion-item">
@@ -162,7 +204,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">
@@ -175,7 +216,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">
@@ -188,7 +228,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">
